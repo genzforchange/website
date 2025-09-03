@@ -1,4 +1,9 @@
-
+let reachStatsXec = {
+  "Total Followers": "100K+",
+  "Creator Network Members": "450+",
+  "Total Viewer Reach": "500M+",
+  "Actions Taken from our Tools": "445M+"
+}
 
 let reachStats = {
   "Total Followers": "1.9M+",

@@ -209,8 +209,12 @@ header {
   /* margin: -20px auto; */
   /* height: calc(100vh - 89px); */
   /* padding: 0 50px 50px 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   >img {
-    max-height: calc(100vh - 150px);
+    /* max-height: calc(100vh - 150px); */
     /* padding-bottom: 21px; */
     max-width: 89vw;
 
