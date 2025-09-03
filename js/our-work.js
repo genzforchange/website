@@ -1,7 +1,6 @@
 const ENDPOINT = 'https://get-statement-data-893947194926.us-central1.run.app/get_initiatives';
 const FALLBACK_IMG = 'assets/placeholder.png';
 
-/* why: API fields can vary; keep summary meaningful */
 function pickSummary(item) {
   const s = item?.summary;
   if (s && s !== 'undefined') return s;
@@ -72,12 +71,21 @@ async function loadInitiatives() {
       desc.className = 'description';
 
       const h2 = document.createElement('h2');
-      const a = document.createElement('a');
-      a.href = item?.url || '#';
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.textContent = item?.title || 'Untitled Initiative';
-      h2.appendChild(a);
+      const rawUrl = item?.url || '';
+      const url = rawUrl.trim();
+
+      console.log(`[${item.title}] Raw URL: "${rawUrl}" | Trimmed: "${url}"`);
+
+      if (url.length > 5 && /^https?:\/\//i.test(url)) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = item.title || 'Untitled Initiative';
+        h2.appendChild(a);
+      } else {
+        h2.textContent = item.title || 'Untitled Initiative';
+      }
 
       const p = document.createElement('p');
       p.textContent = pickSummary(item);
