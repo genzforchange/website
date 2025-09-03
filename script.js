@@ -1,7 +1,7 @@
 let reachStatsXec = {
   "Total Followers": "100K+",
   "Creator Network Members": "450+",
-  "Total Viewer Reach": "500M+",
+  "Total Viewer Reach": "3M+",
   "Actions Taken from our Tools": "445M+"
 }
 
@@ -12,7 +12,7 @@ let reachStats = {
   "Actions Taken from our Tools": "445M+"
 }
 
-let metricsDiv = $('.metrics');
+let metricsDiv = $('#metrics-reach');
 
 for (let key in reachStats) {
   if (reachStats.hasOwnProperty(key)) {
@@ -28,6 +28,25 @@ for (let key in reachStats) {
     statDiv.append(keyP);
 
     metricsDiv.append(statDiv);
+  }
+}
+
+let metricsDivXec = $('#metrics-reach-xec');
+
+for (let key in reachStatsXec) {
+  if (reachStatsXec.hasOwnProperty(key)) {
+    let valueXec = reachStatsXec[key];
+
+    let statDivXec = $('<div class="reach-stat"></div>');
+
+    let valuePXec = $('<h2></h2>').text(valueXec);
+
+    let keyPXec = $('<p></p>').text(key);
+
+    statDivXec.append(valuePXec);
+    statDivXec.append(keyPXec);
+
+    metricsDivXec.append(statDivXec);
   }
 }
 
