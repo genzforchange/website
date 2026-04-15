@@ -51,11 +51,13 @@ async function loadInitiatives() {
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error('Unexpected payload shape');
 
-    data.sort((a, b) => parseDateSafe(pickDate(b)) - parseDateSafe(pickDate(a)));
+    const filtered = data
+    .filter(item => item.c3 !== "true")
+    .sort((a, b) => parseDateSafe(pickDate(b)) - parseDateSafe(pickDate(a)));
 
     const frag = document.createDocumentFragment();
 
-    data.forEach((item, idx) => {
+    filtered.forEach((item, idx) => {
       // wrapper row
       const row = document.createElement('div');
       row.className = 'workflow-item' + (idx % 2 ? ' reverse' : '');
