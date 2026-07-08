@@ -22,25 +22,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <!-- Primary Meta Tags -->
-  <title>Gen-Z For Change | Careers</title>
-  <meta name="title" content="Gen-Z For Change | Careers" />
+  <title>Gen-Z For Change | Endorsements</title>
+  <meta name="title" content="Gen-Z For Change | Endorsements" />
   <meta name="description"
-    content="Gen-Z for Change leverages the power of social media, advocacy, and code to drive tangible progressive change on-the-ground.  Learn more about us. " />
+    content="From city council to Congress, these are the candidates we believe will fight for Gen-Z's future. See our 2026 endorsements." />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://genzforchange.org/" />
-  <meta property="og:title" content="Gen-Z For Change | Careers" />
+  <meta property="og:url" content="https://genzforchange.org/endorsements" />
+  <meta property="og:title" content="Gen-Z For Change | Endorsements" />
   <meta property="og:description"
-    content="Gen-Z for Change leverages the power of social media, advocacy, and code to drive tangible progressive change on-the-ground.  Learn more about us. " />
+    content="From city council to Congress, these are the candidates we believe will fight for Gen-Z's future. See our 2026 endorsements." />
   <meta property="og:image" content="assets/collages/cover-desktop.png" />
 
   <!-- X (Twitter) -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://genzforchange.org/" />
-  <meta property="twitter:title" content="Gen-Z For Change | Careers" />
+  <meta property="twitter:url" content="https://genzforchange.org/endorsements" />
+  <meta property="twitter:title" content="Gen-Z For Change | Endorsements" />
   <meta property="twitter:description"
-    content="Gen-Z for Change leverages the power of social media, advocacy, and code to drive tangible progressive change on-the-ground.  Learn more about us. " />
+    content="From city council to Congress, these are the candidates we believe will fight for Gen-Z's future. See our 2026 endorsements." />
   <meta property="twitter:image" content="assets/collages/cover-desktop.png" />
   <!--  Jquery Link -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -98,68 +98,55 @@
 
     </header>
 
-    <div class="sticker-container">
-      <img src="assets/logos/rw-sticker.png" class="sticker" alt="Rainbow Wifi Icon">
-    </div>
-    <div class="cover">
-      <div>
-        <h1 class="page-title">Work With Us!</h1>
-        <p class="page-subtext lorem">Gen-Z for Change leverages the power of <b>social media, advocacy,</b> and
-          <b>code</b> to drive tangible progressive change on-the-ground.
+    <div class="endorsements-wrap">
+
+      <!-- INTRO -->
+      <section class="endorsements-intro">
+        <span class="endorsements-eyebrow">2026 ENDORSEMENTS</span>
+        <h1 class="endorsements-title">WE DEMAND<br>MORE</h1>
+        <p class="page-subtext">
+          From city council to Congress, these are the candidates we believe will fight for Gen-Z's future. Every
+          endorsee here has committed to the progressive values our generation is organizing for.
         </p>
-        <p class="page-subtext lorem">Join our mission to create a better future! At Gen-Z for Change, we're all about
-          amplifying voices, sparking meaningful conversations, and driving real impact. Whether you’re a creative mind
-          or a change-maker at heart, we’re always looking for passionate individuals to join our team. Let’s
-          collaborate, innovate, and shape the future together. <br>
-          Sound like you? Check out our open positions below!
-        </p>
-      </div>
+        <a href="#vote-embed" class="ballot-pill">
+          <span class="ballot-pill-dot"></span>
+          CHECK YOUR BALLOT
+        </a>
+      </section>
+
+      <!-- FILTER BAR -->
+      <section class="endorsements-filter-bar">
+        <label for="election-type-filter">FILTER BY ELECTION</label>
+        <div class="endorsements-select-wrap">
+          <select id="election-type-filter">
+            <option value="all">All Elections</option>
+            <option value="federal">Federal</option>
+            <option value="state">State</option>
+            <option value="local">Local</option>
+          </select>
+          <span class="endorsements-select-arrow">&#9660;</span>
+        </div>
+        <span id="endorsements-results-label"></span>
+      </section>
+
+      <!-- CARDS GRID -->
+      <section class="endorsements-grid" id="endorsements-grid">
+        <!-- Populated from endorsements.csv by js/endorsements.js -->
+      </section>
+
+      <!-- BALLOTREADY EMBED -->
+      <section id="vote-embed" class="endorsements-ballot">
+        <h2>CHECK YOUR <span>BALLOT</span></h2>
+        <p>See exactly who's running where you live and how our endorsees show up on your ballot.</p>
+        <div class="endorsements-ballot-embed">
+          <span class="endorsements-embed-note">BallotReady embed goes here</span>
+        </div>
+      </section>
+
     </div>
-  </div>
-
-  <div>
-    <p> There are currently no open positions available.
-    </p>
-  </div>
-
-
-  <div id="social-feed">
-    <div class="social-bar">
-      <h1>Follow Us:</h1>
-      <div class="social-links">
-        <a href="https://bsky.app/profile/genzforchange.org"><img src="assets/social-icons/bluesky-blue.svg"
-            alt="Bluesky logo"></a>
-        <a href="https://www.instagram.com/genzforchange/"><img src="assets/social-icons/instagram-blue.svg"
-            alt="Instagram Logo"></a>
-        <a href="https://www.tiktok.com/@genzforchange"><img src="assets/social-icons/tiktok-blue.svg"
-            alt="TikTok Logo"></a>
-        <a href="https://x.com/genzforchange"><img src="assets/social-icons/x-blue.svg" alt="X logo"></a>
-      </div>
-    </div>
-    <div id="instagram-feed">
-    </div>
-  </div>
-
-  <div class="title-bar screen-length blue-bg">
   </div>
 
   <footer>
-
-    <!-- <div class="newsletter-form">
-        <form class="newsletter-fields">
-          <input type="email" required placeholder="Email" id="newsletter-email">
-          <input type="text" required placeholder="Name" id="newsletter-name">
-          <input type="submit" value="Subscribe">
-          <p class="notice">
-            By signing up for our newsletter, you are agreeing to our <a href="#">rules</a>
-          </p>
-        </form>
-        <div class="newsletter-text">
-          <h1>Subscribe for Updates</h1>
-          <p>A newsletter perchance?</p>
-          <p <a href="#" class="notice">Privacy Policy</a> </p>  
-        </div>
-      </div> -->
     <div class="footer-nav">
       <nav id="nav-footer">
         <a href="who-we-are">Who We Are</a>
@@ -167,8 +154,6 @@
         <a href="our-work">Our Work</a>
         <a href="press">Press</a>
         <a href="endorsements">Endorsements</a>
-        <!-- <a href="blog.html">Blog</a>
-          <a href="media.html">Media</a> -->
         <a href="xec">Gen-Z X El Cambio</a>
         <a href="careers">Careers</a>
         <a href="mailto:team@genzforchange.org">Contact Us</a>
@@ -179,15 +164,14 @@
       </nav>
       <img src="assets/logos/rw-sticker.png" id="icon-footer" alt="Rainbow Wifi Icon">
     </div>
-    </div>
   </footer>
   <div class="copyright">
-     © 2025 Gen-Z for Change, Inc.<br>
+    © 2025 Gen-Z for Change, Inc.<br>
     EIN: 87-2835389
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/endorsements.js" defer></script>
+  <script src="script.js" defer></script>
 
 </body>
 
