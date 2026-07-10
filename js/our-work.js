@@ -10,7 +10,7 @@ function pickSummary(item) {
 /* sort by best-available date field, tolerate bad formats */
 function pickDate(item) {
   return item?.date || item?.published_at || item?.publishedAt || item?.created_at || item?.updated_at || '';
-}
+}are 
 
 function parseDateSafe(input) {
   if (!input) return 0;
