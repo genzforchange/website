@@ -52,7 +52,6 @@ async function loadInitiatives() {
     if (!Array.isArray(data)) throw new Error('Unexpected payload shape');
 
     const filtered = data
-    .filter(item => item.c3 !== "true")
     .sort((a, b) => parseDateSafe(pickDate(b)) - parseDateSafe(pickDate(a)));
 
     const frag = document.createDocumentFragment();
