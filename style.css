@@ -1507,6 +1507,16 @@ footer {
 
 /* ===================== ENDORSEMENTS PAGE ===================== */
 
+body.endorsements-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.endorsements-page .landing {
+  flex: 1;
+}
+
 .endorsements-wrap {
   width: 90vw;
   max-width: 1240px;
