@@ -1,0 +1,721 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MOCKUP — We Demand More Endorsements</title>
+    <link rel="icon" type="image" href="favicons/Favicon.png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ulg2hjp.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============ MOCKUP-ONLY STYLES (WDM design language) ============ */
+      :root {
+        --wdm-blue: #4065af;
+        --wdm-light-blue: #b7cdea;
+        --wdm-cream: #f8f7f3;
+        --wdm-red: #ef4347;
+        --wdm-black: #231f20;
+      }
+
+      .mockup-banner {
+        background: var(--wdm-black);
+        color: var(--wdm-cream);
+        text-align: center;
+        font-family: "Lexend", sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 6px 10px;
+      }
+
+      .wdm-wrap {
+        width: 80vw;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      /* recolorable SVG art via mask */
+      .wdm-art {
+        display: inline-block;
+        background-color: var(--wdm-blue);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+
+      /* ---------- HERO ---------- */
+      .wdm-hero {
+        position: relative;
+        margin: 34px auto 21px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+      }
+
+      .wdm-hero-top {
+        display: flex;
+        gap: 21px;
+        align-items: stretch;
+      }
+
+      .wdm-wordmark-panel {
+        flex: 1.1;
+        background: var(--wdm-light-blue);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 44px 34px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .wdm-wordmark {
+        width: 100%;
+        max-width: 520px;
+        aspect-ratio: 1024 / 660;
+        background-color: var(--wdm-blue);
+        -webkit-mask: url("assets/We Demand More/Pens/WDM-logo.svg") no-repeat center / contain;
+        mask: url("assets/We Demand More/Pens/WDM-logo.svg") no-repeat center / contain;
+      }
+
+      .wdm-demands-panel {
+        flex: 1;
+        background: var(--wdm-blue);
+        color: var(--wdm-cream);
+        border-radius: 6px;
+        padding: 44px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        position: relative;
+      }
+
+      .wdm-demands-panel h2 {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--wdm-cream);
+        font-size: 28px;
+        line-height: 1.1;
+      }
+
+      .wdm-demands-panel p {
+        color: var(--wdm-cream);
+        font-weight: 300;
+        font-size: 15px;
+      }
+
+      .wdm-demands-panel .large-button {
+        align-self: flex-start;
+        margin-top: 12px;
+        background: var(--wdm-cream);
+        color: var(--wdm-blue);
+        cursor: pointer;
+      }
+
+      .wdm-demands-panel .large-button:hover {
+        background: transparent;
+        border: 2px solid var(--wdm-cream);
+        color: var(--wdm-cream);
+      }
+
+      /* star row */
+      .wdm-star-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 4px 8px;
+      }
+
+      .wdm-star-row .wdm-art {
+        width: clamp(24px, 4vw, 44px);
+        height: clamp(24px, 4vw, 44px);
+      }
+
+      /* pen accents */
+      .wdm-pen {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      #wdm-pen-hero {
+        right: -18px;
+        top: -30px;
+        width: 34px;
+        height: 260px;
+        transform: rotate(18deg);
+        background-color: var(--wdm-red);
+        -webkit-mask: url("assets/We Demand More/Pens/pen1.svg") no-repeat center / contain;
+        mask: url("assets/We Demand More/Pens/pen1.svg") no-repeat center / contain;
+      }
+
+      /* horizontal black pen divider (tall pen rotated 90°) */
+      .wdm-pen-divider {
+        position: relative;
+        height: 64px;
+        margin: 34px auto 0 auto;
+        overflow: visible;
+      }
+
+      .wdm-pen-divider .pen {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: min(80vw, 480px);
+        height: min(80vw, 480px);
+        transform: translate(-50%, -50%) rotate(90deg);
+        background-color: var(--wdm-black);
+        -webkit-mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+        mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+        pointer-events: none;
+      }
+
+      /* ---------- FILTERS ---------- */
+      .wdm-filters {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        flex-wrap: wrap;
+        margin: 55px auto 26px auto;
+      }
+
+      .wdm-filters label {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--wdm-blue);
+        font-size: 16px;
+        margin-right: 8px;
+      }
+
+      .wdm-filter-pill {
+        font-family: forma-djr-display, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+        border: 2px solid var(--wdm-blue);
+        border-radius: 100px;
+        background: transparent;
+        color: var(--wdm-blue);
+        padding: 8px 24px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .wdm-filter-pill.active,
+      .wdm-filter-pill:hover {
+        background: var(--wdm-blue);
+        color: var(--wdm-cream);
+      }
+
+      /* ---------- CARD GRID ---------- */
+      .wdm-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 26px;
+        margin-bottom: 68px;
+      }
+
+      .wdm-card {
+        position: relative;
+        background: #ffffff;
+        border: 3px solid var(--wdm-blue);
+        border-radius: 8px;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wdm-card-photo {
+        height: 240px;
+        border-radius: 5px 5px 0 0;
+        background: var(--wdm-light-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .wdm-card-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .wdm-card-photo .wdm-art {
+        width: 90px;
+        height: 90px;
+        opacity: 0.85;
+      }
+
+      .wdm-card-body {
+        padding: 18px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .wdm-card-name {
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--wdm-blue);
+        font-size: 22px;
+        line-height: 1.05;
+      }
+
+      .wdm-card-office {
+        font-family: "Lexend", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--wdm-black);
+      }
+
+      .wdm-card-district {
+        font-family: "Lexend", sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        color: var(--wdm-black);
+      }
+
+
+      .wdm-card-links {
+        margin-top: auto;
+        padding-top: 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .wdm-website-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--wdm-blue);
+        color: var(--wdm-cream);
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        text-decoration: none;
+        border-radius: 100px;
+        padding: 8px 18px;
+        transition: 0.2s ease;
+      }
+
+      .wdm-website-btn .arrow {
+        display: inline-block;
+        transition: transform 0.2s ease;
+        font-size: 15px;
+        line-height: 1;
+      }
+
+      .wdm-website-btn:hover {
+        background: var(--wdm-red);
+        color: var(--wdm-cream);
+      }
+
+      .wdm-website-btn:hover .arrow {
+        transform: translateX(4px);
+      }
+
+      .wdm-social-icon {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--wdm-blue);
+        border-radius: 50%;
+        transition: 0.2s ease;
+      }
+
+      .wdm-social-icon + .wdm-social-icon {
+        margin-left: 0;
+      }
+
+      .wdm-social-icon img,
+      .wdm-social-icon svg {
+        width: 17px;
+        height: 17px;
+        display: block;
+      }
+
+      .wdm-social-icon:hover {
+        transform: scale(1.12);
+        background: var(--wdm-light-blue);
+      }
+
+      /* primary date bar */
+      .wdm-primary-bar {
+        background: var(--wdm-red);
+        color: var(--wdm-cream);
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 0 0 5px 5px;
+      }
+
+      /* winner star badge */
+      .wdm-winner-badge {
+        position: absolute;
+        top: -28px;
+        right: -22px;
+        width: 104px;
+        height: 104px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .wdm-winner-badge .star-bg {
+        position: absolute;
+        inset: 0;
+        background-color: var(--wdm-red);
+        -webkit-mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
+        mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
+      }
+
+      .wdm-winner-badge span {
+        position: relative;
+        font-family: forma-djr-display, sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: var(--wdm-cream);
+        transform: rotate(-12deg);
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 900px) {
+        .wdm-hero-top {
+          flex-direction: column;
+        }
+
+        .wdm-wordmark-panel {
+          padding: 34px 21px;
+        }
+
+        .wdm-demands-panel {
+          padding: 34px 26px;
+        }
+
+        #wdm-pen-hero {
+          display: none;
+        }
+
+        .wdm-filters {
+          justify-content: center;
+        }
+
+        .wdm-filters label {
+          width: 100%;
+          text-align: center;
+          margin: 0 0 4px 0;
+        }
+
+        .wdm-winner-badge {
+          top: -22px;
+          right: -10px;
+          width: 88px;
+          height: 88px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="endorsements-page">
+    <div class="mockup-banner">Design mockup — not the live page</div>
+
+    <img
+      id="graph-paper"
+      src="assets/graph-paper.jpg"
+      alt="graph paper covering the background"
+    />
+
+    <div class="landing">
+      <!-- ===== EXISTING SITE HEADER (unchanged) ===== -->
+      <header class="header-container">
+        <a href="/">
+          <img
+            id="logo-header"
+            src="assets/logos/logo-color.png"
+            alt="Gen-Z for Change logo"
+          />
+        </a>
+        <img src="assets/icons/menu.png" alt="Menu" id="menu-button" />
+        <nav class="nav-top">
+          <a href="who-we-are">Who We Are</a>
+          <a href="our-values">Our Values</a>
+          <a href="our-work">Initiatives</a>
+          <a href="press">Press</a>
+          <a href="endorsements">Endorsements</a>
+          <a href="xec">
+            <img id="xec-button" src="assets/xec-pin.png" alt="XEC Button" />
+          </a>
+          <a href="https://secure.actblue.com/donate/genzforchange2025" target="_blank">
+            <img id="donate-button" src="assets/donate-button.avif" alt="Donate Button" />
+          </a>
+          <a href="https://www.vote.org/register-to-vote/" target="_blank">
+            <img id="vote-button" src="assets/vote-button.avif" alt="Vote Button" />
+          </a>
+        </nav>
+      </header>
+
+      <div class="wdm-wrap">
+        <!-- ===== WDM HERO (from Figma) ===== -->
+        <section class="wdm-hero">
+          <div class="wdm-hero-top">
+            <div class="wdm-wordmark-panel">
+              <div class="wdm-wordmark" role="img" aria-label="We Demand More wordmark"></div>
+            </div>
+            <div class="wdm-demands-panel">
+              <div id="wdm-pen-hero" class="wdm-pen"></div>
+              <h2>We demand leaders who fight for us.</h2>
+              <p>
+                From city council to Congress, Gen-Z for Change endorses
+                candidates who will fight for our generation — for climate
+                action, economic justice, and a democracy that works for
+                everyone. These are the people we're sending to win in 2026.
+              </p>
+              <button class="large-button" onclick="document.getElementById('candidates').scrollIntoView({behavior:'smooth'})">
+                View Our Candidates
+              </button>
+            </div>
+          </div>
+
+          <!-- blue star row -->
+          <div class="wdm-star-row" aria-hidden="true">
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star1.svg');mask-image:url('assets/We Demand More/Stars/star1.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star2.svg');mask-image:url('assets/We Demand More/Stars/star2.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star3.svg');mask-image:url('assets/We Demand More/Stars/star3.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star4.svg');mask-image:url('assets/We Demand More/Stars/star4.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star5.svg');mask-image:url('assets/We Demand More/Stars/star5.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star6.svg');mask-image:url('assets/We Demand More/Stars/star6.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star7.svg');mask-image:url('assets/We Demand More/Stars/star7.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star8.svg');mask-image:url('assets/We Demand More/Stars/star8.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star9.svg');mask-image:url('assets/We Demand More/Stars/star9.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star10.svg');mask-image:url('assets/We Demand More/Stars/star10.svg')"></span>
+          </div>
+        </section>
+
+        <!-- black pen divider -->
+        <div class="wdm-pen-divider" aria-hidden="true">
+          <div class="pen"></div>
+        </div>
+
+        <!-- ===== FILTERS ===== -->
+        <section class="wdm-filters" id="candidates">
+          <label>Filter by election</label>
+          <button class="wdm-filter-pill active" data-filter="all">All</button>
+          <button class="wdm-filter-pill" data-filter="federal">Federal</button>
+          <button class="wdm-filter-pill" data-filter="state">State</button>
+          <button class="wdm-filter-pill" data-filter="local">Local</button>
+        </section>
+
+        <!-- ===== SAMPLE CARD GRID (real rows from wedemandmore.csv) ===== -->
+        <section class="wdm-grid">
+          <!-- WINNER card -->
+          <article class="wdm-card" data-level="federal">
+            <div class="wdm-winner-badge">
+              <div class="star-bg"></div>
+              <span>WINNER</span>
+            </div>
+            <div class="wdm-card-photo">
+              <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star3.svg');mask-image:url('assets/We Demand More/Stars/star3.svg')"></span>
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Brad Lander</div>
+              <div class="wdm-card-office">U.S. House of Representatives</div>
+              <div class="wdm-card-district">NY-10</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://bradlanderforcongress.com" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://facebook.com/bradlander" target="_blank" aria-label="Brad Lander on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://instagram.com/brad.lander" target="_blank" aria-label="Brad Lander on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+                <a class="wdm-social-icon" href="https://tiktok.com/@bradlandernyc" target="_blank" aria-label="Brad Lander on TikTok"><img src="assets/social-icons/tiktok-blue.svg" alt="TikTok" /></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plain card, with headshot -->
+          <article class="wdm-card" data-level="federal">
+            <div class="wdm-card-photo">
+              <img
+                src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/CoriBush1.jpg"
+                alt="Cori Bush headshot"
+              />
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Cori Bush</div>
+              <div class="wdm-card-office">U.S. House of Representatives</div>
+              <div class="wdm-card-district">MO-01</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://www.coribush.org" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://www.facebook.com/VoteCoriBush/" target="_blank" aria-label="Cori Bush on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://www.instagram.com/coribush" target="_blank" aria-label="Cori Bush on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+                <a class="wdm-social-icon" href="https://www.tiktok.com/@coribush" target="_blank" aria-label="Cori Bush on TikTok"><img src="assets/social-icons/tiktok-blue.svg" alt="TikTok" /></a>
+              </div>
+            </div>
+            <div class="wdm-primary-bar">Vote by: 08/04/2026</div>
+          </article>
+
+          <!-- Plain card (state level) -->
+          <article class="wdm-card" data-level="state">
+            <div class="wdm-card-photo">
+              <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star7.svg');mask-image:url('assets/We Demand More/Stars/star7.svg')"></span>
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Evan MacKay</div>
+              <div class="wdm-card-office">State Representative</div>
+              <div class="wdm-card-district">MA-25 — Middlesex</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://www.evanforcambridge.com" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://facebook.com/profile.php?id=61554197527008" target="_blank" aria-label="Evan MacKay on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://instagram.com/evanforcambridge" target="_blank" aria-label="Evan MacKay on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Primary date card -->
+          <article class="wdm-card" data-level="federal">
+            <div class="wdm-card-photo">
+              <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star5.svg');mask-image:url('assets/We Demand More/Stars/star5.svg')"></span>
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Justin J. Pearson</div>
+              <div class="wdm-card-office">U.S. House of Representatives</div>
+              <div class="wdm-card-district">TN-09</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://votejustinj.com" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://facebook.com/VoteJustinJ" target="_blank" aria-label="Justin J. Pearson on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://instagram.com/justinjpearson" target="_blank" aria-label="Justin J. Pearson on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+              </div>
+            </div>
+            <div class="wdm-primary-bar">Vote by: 08/06/2026</div>
+          </article>
+
+          <!-- WINNER + headshot, local level -->
+          <article class="wdm-card" data-level="local">
+            <div class="wdm-winner-badge">
+              <div class="star-bg"></div>
+              <span>WINNER</span>
+            </div>
+            <div class="wdm-card-photo">
+              <img
+                src="https://janeesefordc.com/wp-content/uploads/2025/11/2025-JLG-purple-coat-1900.png"
+                alt="Janeese Lewis George headshot"
+              />
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Janeese Lewis George</div>
+              <div class="wdm-card-office">Mayor</div>
+              <div class="wdm-card-district">Washington, DC</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://janeesefordc.com" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://www.facebook.com/Janeese4DC/" target="_blank" aria-label="Janeese Lewis George on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://www.instagram.com/janeese4dc" target="_blank" aria-label="Janeese Lewis George on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+                <a class="wdm-social-icon" href="https://www.tiktok.com/@janeese4dc" target="_blank" aria-label="Janeese Lewis George on TikTok"><img src="assets/social-icons/tiktok-blue.svg" alt="TikTok" /></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plain card with headshot + primary bar -->
+          <article class="wdm-card" data-level="federal">
+            <div class="wdm-card-photo">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/690fb26697ae9453d45ba993/507f5ac9-e5ee-4b93-a40d-4b26623c7aaf/Senadora+Julie+Gonzales.png"
+                alt="Julie Gonzales headshot"
+              />
+            </div>
+            <div class="wdm-card-body">
+              <div class="wdm-card-name">Julie Gonzales</div>
+              <div class="wdm-card-office">U.S. Senate</div>
+              <div class="wdm-card-district">Colorado</div>
+              <div class="wdm-card-links">
+                <a class="wdm-website-btn" href="https://www.julieforcolorado.com" target="_blank">Website <span class="arrow">&rarr;</span></a>
+                <a class="wdm-social-icon" href="https://www.facebook.com/senadorajulie/" target="_blank" aria-label="Julie Gonzales on Facebook"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#4065AF" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 127.8 93.6 233.7 216 252.9V330h-65v-74h65v-56.4c0-64.2 38.2-99.6 96.7-99.6 28 0 57.3 5 57.3 5v63h-32.3c-31.8 0-41.7 19.7-41.7 40V256h71l-11.4 74H296v178.9C418.4 489.7 512 383.8 512 256z"/></svg></a>
+                <a class="wdm-social-icon" href="https://www.instagram.com/senadorajulie" target="_blank" aria-label="Julie Gonzales on Instagram"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram" /></a>
+              </div>
+            </div>
+            <div class="wdm-primary-bar">Vote by: 06/30/2026</div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <!-- ===== EXISTING SITE SOCIAL BAR + FOOTER (unchanged) ===== -->
+    <div class="social-bar">
+      <h1>Follow Us:</h1>
+      <div class="social-links">
+        <a href="https://bsky.app/profile/genzforchange.org"><img src="assets/social-icons/bluesky-blue.svg" alt="Bluesky logo" /></a>
+        <a href="https://www.instagram.com/genzforchange/"><img src="assets/social-icons/instagram-blue.svg" alt="Instagram Logo" /></a>
+        <a href="https://www.tiktok.com/@genzforchange"><img src="assets/social-icons/tiktok-blue.svg" alt="TikTok Logo" /></a>
+        <a href="https://x.com/genzforchange"><img src="assets/social-icons/x-blue.svg" alt="X logo" /></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-nav">
+        <nav id="nav-footer">
+          <a href="who-we-are">Who We Are</a>
+          <a href="our-values">Our Values</a>
+          <a href="our-work">Our Work</a>
+          <a href="press">Press</a>
+          <a href="endorsements">Endorsements</a>
+          <a href="xec">Gen-Z X El Cambio</a>
+          <a href="careers">Careers</a>
+          <a href="mailto:team@genzforchange.org">Contact Us</a>
+          <a href="https://secure.actblue.com/donate/genzforchange2025" target="_blank">Donate</a>
+          <a href="https://www.vote.org/register-to-vote/" target="_blank">Vote</a>
+          <a href="privacy-policy">Privacy Policy</a>
+          <a href="terms-of-use">Terms of Use</a>
+        </nav>
+        <img src="assets/logos/rw-sticker.png" id="icon-footer" alt="Rainbow Wifi Icon" />
+      </div>
+    </footer>
+    <div class="copyright">
+      © 2026 Gen-Z for Change, Inc.<br />
+      EIN: 87-2835389
+    </div>
+
+    <script>
+      document.querySelectorAll(".wdm-filter-pill").forEach(function (pill) {
+        pill.addEventListener("click", function () {
+          document.querySelectorAll(".wdm-filter-pill").forEach(function (p) {
+            p.classList.remove("active");
+          });
+          pill.classList.add("active");
+          var f = pill.dataset.filter;
+          document.querySelectorAll(".wdm-card").forEach(function (card) {
+            card.style.display = f === "all" || card.dataset.level === f ? "" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
