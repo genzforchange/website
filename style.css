@@ -1507,7 +1507,7 @@ footer {
 
 /* ===================== ENDORSEMENTS PAGE ===================== */
 
-body.endorsements-page {
+/* body.endorsements-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -1815,4 +1815,4 @@ body.endorsements-page .landing {
   #endorsements-results-label {
     margin-left: 0;
   }
-}
+} */

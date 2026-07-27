@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "wCiOfnb5TrvG-_stT3eZh"
+uri = "file://.local/assets/wdm-desktop.png"
+type = "image"
+title = "WDM Figma — Desktop hero"
+
+[[outputs]]
+id = "Vjd7iSJupAYsyGzrWWrdd"
+uri = "file://.local/assets/wdm-mobile.png"
+type = "image"
+title = "WDM Figma — Mobile hero"
