@@ -2278,6 +2278,11 @@ body.endorsements-page .landing {
     display: none;
   }
 
+  .wdm-pen-divider .pen {
+    -webkit-mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+    mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+  }
+
   .wdm-pen-mobile {
     display: block;
   }
