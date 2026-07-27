@@ -1816,3 +1816,492 @@ body.endorsements-page .landing {
     margin-left: 0;
   }
 } */
+
+/* ===================== WE DEMAND MORE — ENDORSEMENTS PAGE ===================== */
+
+.endorsements-page {
+  --wdm-blue: #4065af;
+  --wdm-light-blue: #b7cdea;
+  --wdm-cream: #f8f7f3;
+  --wdm-red: #ef4347;
+  --wdm-black: #231f20;
+}
+
+/* sticky footer: pin footer to bottom on short content */
+body.endorsements-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.endorsements-page .landing {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+.wdm-wrap {
+  width: 80vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* recolorable SVG art via mask */
+.wdm-art {
+  display: inline-block;
+  background-color: var(--wdm-blue);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* ---------- HERO ---------- */
+.wdm-hero {
+  position: relative;
+  margin: 34px auto 21px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.wdm-hero-top {
+  display: flex;
+  gap: 21px;
+  align-items: stretch;
+}
+
+.wdm-wordmark-panel {
+  flex: 1.1;
+  background: var(--wdm-light-blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wdm-wordmark {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1024 / 660;
+  background-color: var(--wdm-black);
+  -webkit-mask: url("assets/We Demand More/Pens/WDM-logo.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Pens/WDM-logo.svg") no-repeat center / contain;
+}
+
+.wdm-demands-panel {
+  flex: 1;
+  background: var(--wdm-blue);
+  color: var(--wdm-cream);
+  border-radius: 6px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+}
+
+.wdm-demands-panel h2 {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--wdm-cream);
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.wdm-demands-panel p {
+  color: var(--wdm-cream);
+  font-weight: var(--light);
+  font-size: 15px;
+}
+
+.wdm-demands-panel .large-button {
+  align-self: flex-start;
+  margin-top: 12px;
+  background: var(--wdm-cream);
+  color: var(--wdm-blue);
+  cursor: pointer;
+}
+
+.wdm-demands-panel .large-button:hover {
+  background: transparent;
+  border: 2px solid var(--wdm-cream);
+  color: var(--wdm-cream);
+}
+
+/* star row */
+.wdm-star-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+}
+
+.wdm-star-row .wdm-art {
+  width: clamp(24px, 4vw, 44px);
+  height: clamp(24px, 4vw, 44px);
+}
+
+/* pen accents */
+.wdm-pen {
+  position: absolute;
+  pointer-events: none;
+}
+
+#wdm-pen-hero {
+  right: -18px;
+  top: -30px;
+  width: 34px;
+  height: 260px;
+  transform: rotate(18deg);
+  background-color: var(--wdm-red);
+  -webkit-mask: url("assets/We Demand More/Pens/pen1.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Pens/pen1.svg") no-repeat center / contain;
+}
+
+/* big black ballpoint pen under the wordmark — mobile only (per mobile Figma frame) */
+.wdm-pen-mobile {
+  display: none;
+  position: relative;
+  height: 90px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.wdm-pen-mobile::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(94vw, 460px);
+  height: min(94vw, 460px);
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-color: var(--wdm-black);
+  -webkit-mask: url("assets/We Demand More/Pens/pen5.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Pens/pen5.svg") no-repeat center / contain;
+}
+
+/* horizontal black pen divider */
+.wdm-pen-divider {
+  position: relative;
+  height: 64px;
+  margin: 34px auto 0 auto;
+  overflow: visible;
+}
+
+.wdm-pen-divider .pen {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(80vw, 480px);
+  height: min(80vw, 480px);
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-color: var(--wdm-black);
+  -webkit-mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* ---------- FILTERS ---------- */
+.wdm-filters {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  margin: 55px auto 26px auto;
+}
+
+.wdm-filters label {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--wdm-blue);
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.wdm-filter-pill {
+  font-family: forma-djr-display, sans-serif;
+  text-transform: uppercase;
+  font-weight: var(--bold);
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  border: 2px solid var(--wdm-blue);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--wdm-blue);
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.wdm-filter-pill.active,
+.wdm-filter-pill:hover {
+  background: var(--wdm-blue);
+  color: var(--wdm-cream);
+}
+
+#wdm-results-label {
+  font-family: "Lexend", sans-serif;
+  font-weight: var(--light);
+  font-size: 13px;
+  color: var(--wdm-black);
+  margin-left: 8px;
+}
+
+/* ---------- CARD GRID ---------- */
+.wdm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+  margin-bottom: 68px;
+}
+
+.wdm-empty {
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  color: var(--wdm-black);
+  margin: 0 auto 68px auto;
+}
+
+.wdm-card {
+  position: relative;
+  background: #ffffff;
+  border: 3px solid var(--wdm-blue);
+  border-radius: 8px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.wdm-card-photo {
+  height: 240px;
+  border-radius: 5px 5px 0 0;
+  background: var(--wdm-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wdm-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.wdm-card-photo .wdm-art {
+  width: 90px;
+  height: 90px;
+  opacity: 0.85;
+}
+
+.wdm-card-body {
+  padding: 18px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.wdm-card-name {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--wdm-blue);
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.wdm-card-office {
+  font-family: "Lexend", sans-serif;
+  font-weight: var(--medium);
+  font-size: 14px;
+  color: var(--wdm-black);
+}
+
+.wdm-card-district {
+  font-family: "Lexend", sans-serif;
+  font-weight: var(--light);
+  font-size: 13px;
+  color: var(--wdm-black);
+}
+
+.wdm-card-links {
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.wdm-website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--wdm-blue);
+  color: var(--wdm-cream);
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 8px 18px;
+  transition: 0.2s ease;
+}
+
+.wdm-website-btn .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.wdm-website-btn:hover {
+  background: var(--wdm-red);
+  color: var(--wdm-cream);
+}
+
+.wdm-website-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+.wdm-social-icon {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--wdm-blue);
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.wdm-social-icon + .wdm-social-icon {
+  margin-left: 0;
+}
+
+.wdm-social-icon img,
+.wdm-social-icon svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.wdm-social-icon:hover {
+  transform: scale(1.12);
+  background: var(--wdm-light-blue);
+}
+
+/* vote-by bar */
+.wdm-primary-bar {
+  background: var(--wdm-red);
+  color: var(--wdm-cream);
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* winner star badge */
+.wdm-winner-badge {
+  position: absolute;
+  top: -28px;
+  right: -22px;
+  width: 104px;
+  height: 104px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wdm-winner-badge .star-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--wdm-red);
+  -webkit-mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
+}
+
+.wdm-winner-badge span {
+  position: relative;
+  font-family: forma-djr-display, sans-serif;
+  font-weight: var(--extra-bold);
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: var(--wdm-cream);
+  transform: rotate(-12deg);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .wdm-hero-top {
+    flex-direction: column;
+  }
+
+  /* wide, short light-blue box; wordmark spills out of its top and bottom (per reference) */
+  .wdm-wordmark-panel {
+    padding: 0 10px;
+    overflow: visible;
+  }
+
+  .wdm-wordmark {
+    width: 104%;
+    max-width: none;
+    margin: -26px -2%;
+  }
+
+  .wdm-demands-panel {
+    padding: 34px 26px;
+  }
+
+  #wdm-pen-hero {
+    display: none;
+  }
+
+  .wdm-pen-mobile {
+    display: block;
+  }
+
+  .wdm-filters {
+    justify-content: center;
+  }
+
+  .wdm-filters label {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 4px 0;
+  }
+
+  #wdm-results-label {
+    width: 100%;
+    text-align: center;
+    margin: 4px 0 0 0;
+  }
+
+  .wdm-winner-badge {
+    top: -22px;
+    right: -10px;
+    width: 88px;
+    height: 88px;
+  }
+}

@@ -1,0 +1,1 @@
+- [script.js top-level fragility](scriptjs-fragility.md) — an uncaught error in shared script.js kills appended code; put page logic in its own script file.

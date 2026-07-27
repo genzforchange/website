@@ -143,35 +143,68 @@
         </div>
       </header>
 
-      <div class="endorsements-wrap">
-        <!-- INTRO -->
-        <section class="endorsements-intro">
-          <h1 class="endorsements-title">WE DEMAND<br />MORE!</h1>
-          <p class="page-subtext">
- Our live list of endorsements for the 2026 election cycle is coming soon. Check our Instagram for updates. 
-          </p>
- 
+      <div class="wdm-wrap">
+        <!-- WDM HERO -->
+        <section class="wdm-hero">
+          <div class="wdm-hero-top">
+            <div class="wdm-wordmark-panel">
+              <div
+                class="wdm-wordmark"
+                role="img"
+                aria-label="We Demand More wordmark"
+              ></div>
+            </div>
+            <div class="wdm-pen-mobile" aria-hidden="true"></div>
+            <div class="wdm-demands-panel">
+              <div id="wdm-pen-hero" class="wdm-pen"></div>
+              <h2>We demand leaders who fight for us.</h2>
+              <p>
+                From city council to Congress, Gen-Z for Change endorses
+                candidates who will fight for our generation — for climate
+                action, economic justice, and a democracy that works for
+                everyone. These are the people we're sending to win in 2026.
+              </p>
+              <button class="large-button" id="wdm-view-candidates">
+                View Our Candidates
+              </button>
+            </div>
+          </div>
+
+          <!-- blue star row -->
+          <div class="wdm-star-row" aria-hidden="true">
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star1.svg');mask-image:url('assets/We Demand More/Stars/star1.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star2.svg');mask-image:url('assets/We Demand More/Stars/star2.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star3.svg');mask-image:url('assets/We Demand More/Stars/star3.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star4.svg');mask-image:url('assets/We Demand More/Stars/star4.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star5.svg');mask-image:url('assets/We Demand More/Stars/star5.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star6.svg');mask-image:url('assets/We Demand More/Stars/star6.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star7.svg');mask-image:url('assets/We Demand More/Stars/star7.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star8.svg');mask-image:url('assets/We Demand More/Stars/star8.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star9.svg');mask-image:url('assets/We Demand More/Stars/star9.svg')"></span>
+            <span class="wdm-art" style="-webkit-mask-image:url('assets/We Demand More/Stars/star10.svg');mask-image:url('assets/We Demand More/Stars/star10.svg')"></span>
+          </div>
         </section>
 
-        <!-- FILTER BAR -->
-        <!-- <section class="endorsements-filter-bar">
-          <label for="election-type-filter">FILTER BY ELECTION</label>
-          <div class="endorsements-select-wrap">
-            <select id="election-type-filter">
-              <option value="all">All Elections</option>
-              <option value="federal">Federal</option>
-              <option value="state">State</option>
-              <option value="local">Local</option>
-            </select>
-            <span class="endorsements-select-arrow">&#9660;</span>
-          </div>
-          <span id="endorsements-results-label"></span>
-        </section> -->
+        <!-- black pen divider -->
+        <div class="wdm-pen-divider" aria-hidden="true">
+          <div class="pen"></div>
+        </div>
 
-        <!-- CARDS GRID -->
-        <!-- <section class="endorsements-grid" id="endorsements-grid"> -->
-          <!-- Populated from endorsements.csv by js/endorsements.js -->
-        <!-- </section> -->
+        <!-- FILTERS -->
+        <section class="wdm-filters" id="candidates">
+          <label>Filter by election</label>
+          <button class="wdm-filter-pill active" data-filter="all">All</button>
+          <button class="wdm-filter-pill" data-filter="federal">Federal</button>
+          <button class="wdm-filter-pill" data-filter="state">State</button>
+          <button class="wdm-filter-pill" data-filter="local">Local</button>
+          <span id="wdm-results-label"></span>
+        </section>
+
+        <!-- CARDS GRID (populated from wedemandmore.csv by script.js) -->
+        <section class="wdm-grid" id="wdm-grid"></section>
+        <p id="wdm-empty" class="wdm-empty" hidden>
+          No candidates match this filter yet — check back soon!
+        </p>
       </div>
     </div>
 
@@ -226,5 +259,6 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="script.js"></script>
+    <script src="wdm-endorsements.js"></script>
   </body>
 </html>
