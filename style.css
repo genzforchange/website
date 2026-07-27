@@ -2005,8 +2005,8 @@ body.endorsements-page .landing {
   height: min(80vw, 480px);
   transform: translate(-50%, -50%) rotate(90deg);
   background-color: var(--wdm-black);
-  -webkit-mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
-  mask: url("assets/We Demand More/Pens/pen2.svg") no-repeat center / contain;
+  -webkit-mask: url("assets/We Demand More/Pens/pen5.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Pens/pen5.svg") no-repeat center / contain;
   pointer-events: none;
 }
 
