@@ -465,6 +465,22 @@ const response = async (page) => {
 //   });
 // });
 
-$("#menu-button").on("click", function() {
-  $("#mobile-menu").toggle("display: block");
-})
+// Mobile menu toggle (vanilla JS so it works regardless of jQuery load order)
+(function () {
+  function initMobileMenu() {
+    var button = document.getElementById("menu-button");
+    var menu = document.getElementById("mobile-menu");
+    if (!button || !menu) return;
+
+    button.addEventListener("click", function () {
+      var isOpen = window.getComputedStyle(menu).display !== "none";
+      menu.style.display = isOpen ? "none" : "block";
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
