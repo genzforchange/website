@@ -236,6 +236,10 @@
             level: (r[3] || "").trim().toLowerCase(),
             won: won,
             primaryDateRaw: primaryDateRaw,
+            upcomingPrimary:
+              !won && primaryDate !== null && primaryDate > today
+                ? primaryDate.getTime()
+                : null,
             showVoteBar: !won && primaryDate !== null && primaryDate > today,
             website: (r[6] || "").trim(),
             facebook: (r[7] || "").trim(),
@@ -245,6 +249,12 @@
           };
         })
         .sort(function (a, b) {
+          var aUp = a.upcomingPrimary !== null;
+          var bUp = b.upcomingPrimary !== null;
+          if (aUp !== bUp) return aUp ? -1 : 1;
+          if (aUp && bUp && a.upcomingPrimary !== b.upcomingPrimary) {
+            return a.upcomingPrimary - b.upcomingPrimary;
+          }
           return (
             lastName(a.name).localeCompare(lastName(b.name)) ||
             a.name.localeCompare(b.name)
