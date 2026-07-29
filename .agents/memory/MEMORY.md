@@ -1,1 +1,2 @@
 - [script.js top-level fragility](scriptjs-fragility.md) — an uncaught error in shared script.js kills appended code; put page logic in its own script file.
+- [aspect-ratio cards vs intrinsic image size](card-aspect-ratio-images.md) — photo areas in fixed-aspect cards need flex-basis 0 + absolute img, or image dimensions inflate card height.

@@ -102,23 +102,34 @@
     "star10.svg",
   ];
 
+  // Per-candidate headshot crop overrides (default is object-position: top).
+  var PHOTO_POSITION_OVERRIDES = {
+    "Janeese Lewis George": "center",
+  };
+
   function cardHTML(c, index) {
     var html =
       '<article class="wdm-card" data-level="' + escapeHTML(c.level) + '">';
 
-    if (c.won) {
-      html +=
-        '<div class="wdm-winner-badge"><div class="star-bg"></div><span>WON!</span></div>';
-    }
+    // Star "WON!" badge — kept for future general-election wins.
+    // if (c.won) {
+    //   html +=
+    //     '<div class="wdm-winner-badge"><div class="star-bg"></div><span>WON!</span></div>';
+    // }
 
     html += '<div class="wdm-card-photo">';
     if (c.headshot) {
+      var photoPos = PHOTO_POSITION_OVERRIDES[c.name];
       html +=
         '<img src="' +
         escapeHTML(c.headshot) +
         '" alt="' +
         escapeHTML(c.name) +
-        ' headshot" onerror="this.onerror=null;this.src=\'assets/placeholder.png\';" />';
+        ' headshot"' +
+        (photoPos
+          ? ' style="object-position:' + escapeHTML(photoPos) + ';"'
+          : "") +
+        ' onerror="this.onerror=null;this.src=\'assets/placeholder.png\';" />';
     } else {
       var star =
         "assets/We Demand More/Stars/" +
@@ -193,6 +204,8 @@
         '<div class="wdm-primary-bar">Primary Election on ' +
         escapeHTML(c.primaryDateRaw) +
         "</div>";
+    } else if (c.won) {
+      html += '<div class="wdm-won-bar">Won Primary</div>';
     }
 
     html += "</article>";
