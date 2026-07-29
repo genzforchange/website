@@ -2010,6 +2010,18 @@ body.endorsements-page .landing {
   pointer-events: none;
 }
 
+/* ---------- ENDORSEMENTS HEADING ---------- */
+.wdm-endorsements-title {
+  font-family: "antipol-variable", sans-serif;
+  font-variation-settings: "STCH" 1, "wdth" 100, "wght" 400;
+  color: var(--wdm-blue);
+  text-transform: uppercase;
+  font-size: clamp(44px, 8vw, 88px);
+  line-height: 1;
+  text-align: center;
+  margin: 60px auto 0 auto;
+}
+
 /* ---------- FILTERS ---------- */
 .wdm-filters {
   display: flex;
@@ -2081,10 +2093,12 @@ body.endorsements-page .landing {
   overflow: visible;
   display: flex;
   flex-direction: column;
+  aspect-ratio: 2 / 3; /* portrait cards; photo flexes to fill, content can grow taller if needed */
 }
 
 .wdm-card-photo {
-  height: 240px;
+  flex: 1 1 auto;
+  min-height: 300px;
   border-radius: 5px 5px 0 0;
   background: var(--wdm-light-blue);
   display: flex;
@@ -2107,11 +2121,11 @@ body.endorsements-page .landing {
 }
 
 .wdm-card-body {
-  padding: 18px 20px 20px 20px;
+  padding: 16px 18px 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  gap: 5px;
+  flex: 0 0 auto;
 }
 
 .wdm-card-name {
@@ -2140,7 +2154,7 @@ body.endorsements-page .landing {
 
 .wdm-card-links {
   margin-top: auto;
-  padding-top: 14px;
+  padding-top: 12px;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -2238,8 +2252,8 @@ body.endorsements-page .landing {
   position: absolute;
   inset: 0;
   background-color: var(--wdm-red);
-  -webkit-mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
-  mask: url("assets/We Demand More/Stars/star1.svg") no-repeat center / contain;
+  -webkit-mask: url("assets/We Demand More/Stars/star6.svg") no-repeat center / contain;
+  mask: url("assets/We Demand More/Stars/star6.svg") no-repeat center / contain;
 }
 
 .wdm-winner-badge span {
@@ -2308,5 +2322,13 @@ body.endorsements-page .landing {
     right: -10px;
     width: 88px;
     height: 88px;
+  }
+
+  /* cap card width on small screens so the 3/4 portrait ratio
+     doesn't stretch cards too tall/narrow */
+  .wdm-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
