@@ -2227,9 +2227,14 @@ body.endorsements-page .landing {
   background: var(--wdm-light-blue);
 }
 
-/* vote-by bar */
-.wdm-primary-bar {
-  background: var(--wdm-red);
+/* status banners — strips overlaying the bottom of the headshot */
+.wdm-primary-bar,
+.wdm-won-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   color: var(--wdm-cream);
   font-family: forma-djr-display, sans-serif;
   font-weight: var(--bold);
@@ -2238,21 +2243,14 @@ body.endorsements-page .landing {
   font-size: 13px;
   text-align: center;
   padding: 8px 10px;
-  border-radius: 0 0 5px 5px;
 }
 
-/* won-primary bar (blue counterpart to the red primary bar) */
+.wdm-primary-bar {
+  background: var(--wdm-red);
+}
+
 .wdm-won-bar {
   background: var(--wdm-blue);
-  color: var(--wdm-cream);
-  font-family: forma-djr-display, sans-serif;
-  font-weight: var(--bold);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 13px;
-  text-align: center;
-  padding: 8px 10px;
-  border-radius: 0 0 5px 5px;
 }
 
 /* winner star badge — commented out; reserved for future general-election wins.

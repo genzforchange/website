@@ -141,6 +141,14 @@
         star +
         "')\"></span>";
     }
+    if (c.showVoteBar) {
+      html +=
+        '<div class="wdm-primary-bar">Primary Election on ' +
+        escapeHTML(c.primaryDateRaw) +
+        "</div>";
+    } else if (c.won) {
+      html += '<div class="wdm-won-bar">Won Primary</div>';
+    }
     html += "</div>";
 
     html += '<div class="wdm-card-body">';
@@ -198,15 +206,6 @@
     }
     html += "</div>"; // .wdm-card-links
     html += "</div>"; // .wdm-card-body
-
-    if (c.showVoteBar) {
-      html +=
-        '<div class="wdm-primary-bar">Primary Election on ' +
-        escapeHTML(c.primaryDateRaw) +
-        "</div>";
-    } else if (c.won) {
-      html += '<div class="wdm-won-bar">Won Primary</div>';
-    }
 
     html += "</article>";
     return html;
