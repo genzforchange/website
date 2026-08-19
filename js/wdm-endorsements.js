@@ -77,7 +77,12 @@
   function parseDate(str) {
     var m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec((str || "").trim());
     if (!m) return null;
-    return new Date(+m[3], +m[1] - 1, +m[2]);
+    var date = new Date(+m[3], +m[1] - 1, +m[2]);
+    return date.getFullYear() === +m[3] &&
+      date.getMonth() === +m[1] - 1 &&
+      date.getDate() === +m[2]
+      ? date
+      : null;
   }
 
   var GLOBE_SVG =
@@ -272,6 +277,10 @@
               !won && primaryDate !== null && primaryDate > today
                 ? primaryDate.getTime()
                 : null,
+            passedPrimary:
+              primaryDate !== null && primaryDate <= today
+                ? primaryDate.getTime()
+                : null,
             showVoteBar: !won && primaryDate !== null && primaryDate > today,
             website: (r[6] || "").trim(),
             facebook: (r[7] || "").trim(),
@@ -287,6 +296,16 @@
           if (aUp !== bUp) return aUp ? -1 : 1;
           if (aUp && bUp && a.upcomingPrimary !== b.upcomingPrimary) {
             return a.upcomingPrimary - b.upcomingPrimary;
+          }
+          var aPassed = a.passedPrimary !== null;
+          var bPassed = b.passedPrimary !== null;
+          if (aPassed !== bPassed) return aPassed ? -1 : 1;
+          if (
+            aPassed &&
+            bPassed &&
+            a.passedPrimary !== b.passedPrimary
+          ) {
+            return b.passedPrimary - a.passedPrimary;
           }
           return (
             lastName(a.name).localeCompare(lastName(b.name)) ||
