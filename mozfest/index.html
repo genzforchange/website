@@ -11,26 +11,62 @@
     <link rel="stylesheet" href="/mozfest/mozfest.css">
   </head>
   <body>
-    <main class="page-shell">
-      <header class="masthead">
-        <a class="brand" href="/" aria-label="Gen-Z for Change homepage">
-          <img src="/assets/logos/logo-color.png" alt="Gen-Z for Change">
+    <header class="site-header">
+      <a class="site-brand" href="/" aria-label="Gen-Z for Change homepage">
+        <img src="/assets/logos/logo-color.png" alt="Gen-Z for Change logo">
+      </a>
+      <nav class="nav-top" aria-label="Main navigation">
+        <a href="/who-we-are">Who We Are</a>
+        <a href="/our-values">Our Values</a>
+        <a href="/our-work">Initiatives</a>
+        <a href="/press">Press</a>
+        <a href="/endorsements">Endorsements</a>
+        <a class="nav-image-link" href="/xec" aria-label="Gen-Z X El Cambio">
+          <img class="xec-button" src="/assets/xec-pin.png" alt="XEC">
         </a>
-        <span class="event-tag">MozFest resource stop</span>
-      </header>
+        <a class="nav-image-link" href="https://secure.actblue.com/donate/genzforchange2025" target="_blank" rel="noopener noreferrer" aria-label="Donate">
+          <img class="donate-button" src="/assets/donate-button.avif" alt="Donate">
+        </a>
+        <a class="nav-image-link" href="https://www.vote.org/register-to-vote/" target="_blank" rel="noopener noreferrer" aria-label="Register to vote">
+          <img class="vote-button" src="/assets/vote-button.avif" alt="Vote">
+        </a>
+      </nav>
+      <details class="mobile-navigation">
+        <summary aria-label="Open navigation menu">
+          <img src="/assets/icons/menu.png" alt="">
+          <span>Menu</span>
+        </summary>
+        <nav class="nav-mobile" aria-label="Mobile navigation">
+          <a href="/who-we-are">Who We Are</a>
+          <a href="/our-values">Our Values</a>
+          <a href="/our-work">Initiatives</a>
+          <a href="/press">Press</a>
+          <a href="/endorsements">Endorsements</a>
+          <a href="/xec">Gen-Z X El Cambio</a>
+          <a href="https://secure.actblue.com/donate/genzforchange2025" target="_blank" rel="noopener noreferrer">Donate</a>
+          <a href="https://www.vote.org/register-to-vote/" target="_blank" rel="noopener noreferrer">Vote</a>
+        </nav>
+      </details>
+    </header>
 
+    <main class="page-shell">
       <section class="intro" aria-labelledby="welcome-heading">
-        <p class="eyebrow">Glad you made it</p>
-        <h1 id="welcome-heading">Take the ideas with you.</h1>
+        <h1 id="welcome-heading">Thanks for joining us!</h1>
         <p class="intro-copy">Thanks for connecting with Gen-Z for Change at MozFest. Find the session resources, get to know our community, and keep the conversation going.</p>
       </section>
 
       <section class="resource-section" aria-labelledby="resources-heading">
         <div class="section-heading">
-          <h2 id="resources-heading">Your MozFest links</h2>
-          <span>Four quick stops</span>
+          <h2 id="resources-heading">Resources:</h2>
         </div>
         <nav class="resource-list" aria-label="MozFest resources">
+          <a class="resource-link" href="https://docs.google.com/presentation/d/e/2PACX-1vSJRQWdl5A4HLswd05-2YjyJQlR7kwFA2iCKpNfD8gm3I3OEwOgDN-4Mftjc49QR914sAH4oB936Qun/pub?start=false&amp;loop=false&amp;delayms=3000">
+            <span class="resource-copy">
+              <span class="resource-title">English presentation</span>
+              <span class="resource-note">Session presentation</span>
+            </span>
+            <span class="arrow" aria-hidden="true">›</span>
+          </a>
           <a class="resource-link" href="https://example.com/mozfest-spanish-presentation">
             <span class="resource-mark" aria-hidden="true">01</span>
             <span class="resource-copy">
@@ -39,19 +75,19 @@
             </span>
             <span class="arrow" aria-hidden="true">›</span>
           </a>
-          <a class="resource-link" href="https://example.com/mozfest-community-document">
+          <a class="resource-link" href="https://docs.google.com/document/d/1XMw7Wfx69ae4zyfeDkdYF1mzBL4Ld2Tp11Kqytso1ps/edit?tab=t.0">
             <span class="resource-mark" aria-hidden="true">02</span>
             <span class="resource-copy">
               <span class="resource-title">Community document</span>
-              <span class="resource-note">Shared notes and resources · temporary link</span>
+              <span class="resource-note">Shared notes and resources</span>
             </span>
             <span class="arrow" aria-hidden="true">›</span>
           </a>
-          <a class="resource-link" href="https://example.com/anthem-award-voting">
+          <a class="resource-link" href="https://celebrate.anthemawards.com/PublicVoting#/2026/technology/campaign/non-profit">
             <span class="resource-mark" aria-hidden="true">03</span>
             <span class="resource-copy">
-              <span class="resource-title">Anthem Award voting document</span>
-              <span class="resource-note">Voting information · temporary link</span>
+              <span class="resource-title">Vote for us for an Anthem Awards</span>
+              <span class="resource-note">Voting information</span>
             </span>
             <span class="arrow" aria-hidden="true">›</span>
           </a>
@@ -64,7 +100,6 @@
             <span class="arrow" aria-hidden="true">›</span>
           </a>
         </nav>
-        <p class="notice"><strong>Quick heads-up:</strong> These are placeholder links, not live resources or a working form. The feedback link does not collect responses. Please check back with the Gen-Z for Change team for real materials.</p>
       </section>
 
       <section class="connect" aria-label="Stay connected and contacts">
@@ -75,21 +110,37 @@
         </div>
         <aside class="contacts" aria-labelledby="contacts-heading">
           <h2 id="contacts-heading">Your presenters</h2>
-          <p>Contact details below are temporary placeholders, not real contacts.</p>
           <ul class="contact-list">
-            <li><strong>Presenter One</strong><a href="mailto:presenter.one@example.com">presenter.one@example.com</a></li>
-            <li><strong>Presenter Two</strong><a href="mailto:presenter.two@example.com">presenter.two@example.com</a></li>
+            <li><strong>Sofia Ongele</strong><a href="mailto:songele@genzforchange.org">songele@genzforchange.org</a></li>
+            <li><strong>Jack Petocz</strong><a href="mailto:jpetocz@genzforchange.org">jpetocz@genzforchange.org</a></li>
+            <li><strong>Hana Memon</strong><a href="mailto:hmemon@genzforchange.org">hmemon@genzforchange.org</a></li>
           </ul>
         </aside>
       </section>
 
-      <footer>
-        <span>Gen-Z for Change · MozFest</span>
-        <nav class="footer-links" aria-label="Organization links">
-          <a href="/">Homepage</a>
-          <a href="https://www.instagram.com/genzforchange/">Instagram</a>
-        </nav>
-      </footer>
     </main>
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <nav id="nav-footer" aria-label="Organization links">
+          <a href="/who-we-are">Who We Are</a>
+          <a href="/our-values">Our Values</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/press">Press</a>
+          <a href="/endorsements">Endorsements</a>
+          <a href="/xec">Gen-Z X El Cambio</a>
+          <a href="/careers">Careers</a>
+          <a href="mailto:team@genzforchange.org">Contact Us</a>
+          <a href="https://secure.actblue.com/donate/genzforchange2025" target="_blank" rel="noopener noreferrer">Donate</a>
+          <a href="https://www.vote.org/register-to-vote/" target="_blank" rel="noopener noreferrer">Vote</a>
+          <a href="https://www.instagram.com/genzforchange/">Instagram</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-use">Terms of Use</a>
+        </nav>
+        <a class="footer-sticker-link" href="/" aria-label="Gen-Z for Change home">
+          <img src="/assets/logos/rw-sticker.png" alt="Rainbow Wifi">
+        </a>
+      </div>
+      <p class="copyright">© 2025 Gen-Z for Change, Inc.<br>EIN: 87-2835389</p>
+    </footer>
   </body>
 </html>
