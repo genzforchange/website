@@ -200,6 +200,44 @@ header {
   margin-bottom: 21px;
 }
 
+/* Static notices used only on the home and Initiatives pages. */
+.page-announcement {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 80vw;
+  max-width: 1920px;
+  margin: 16px auto;
+  padding: 12px 16px;
+  background-color: var(--yellow2);
+  color: var(--black);
+  border-radius: 2px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.page-announcement p {
+  margin: 0;
+  font-size: var(--p-size);
+  font-weight: var(--regular);
+  line-height: 1.5;
+}
+
+.page-announcement a {
+  color: var(--black);
+  font-weight: var(--bold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-announcement a:hover {
+  text-decoration-thickness: 3px;
+}
+
+.page-announcement a:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 3px;
+}
+
 /* cover css */
 
 .cover-home {
