@@ -151,7 +151,9 @@
         '<div class="wdm-primary-bar">Primary Election on ' +
         escapeHTML(c.primaryDateRaw) +
         "</div>";
-    } else if (c.won) {
+    } else if (c.competitive) {
+      html += '<div class="wdm-won-bar key-race">Key Race</div>';
+    }else if (c.won) {
       html += '<div class="wdm-won-bar">Won Primary</div>';
     }
     html += "</div>";
@@ -265,6 +267,7 @@
         .map(function (r) {
           var won = (r[4] || "").trim().toUpperCase() === "TRUE";
           var primaryDateRaw = (r[5] || "").trim();
+          var competitive = (r[12] || "").trim().toUpperCase() === "TRUE"
           var primaryDate = parseDate(primaryDateRaw);
           return {
             name: (r[0] || "").trim(),
@@ -288,10 +291,12 @@
             x: (r[9] || "").trim(),
             tiktok: (r[10] || "").trim(),
             headshot: (r[11] || "").trim(),
+            competitive: competitive
           };
         })
         .sort(function (a, b) {
           if (a.won !== b.won) return a.won ? -1 : 1;
+          if (a.competitive !== b.competitive) return a.competitive ? -1 : 1;
           var aUp = a.upcomingPrimary !== null;
           var bUp = b.upcomingPrimary !== null;
           if (aUp !== bUp) return aUp ? -1 : 1;

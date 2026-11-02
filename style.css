@@ -2291,6 +2291,10 @@ body.endorsements-page .landing {
   background: var(--wdm-blue);
 }
 
+.key-race {
+  background: var(--wdm-red);
+}
+
 /* winner star badge — commented out; reserved for future general-election wins.
 .wdm-winner-badge {
   position: absolute;
