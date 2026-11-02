@@ -291,6 +291,7 @@
           };
         })
         .sort(function (a, b) {
+          if (a.won !== b.won) return a.won ? -1 : 1;
           var aUp = a.upcomingPrimary !== null;
           var bUp = b.upcomingPrimary !== null;
           if (aUp !== bUp) return aUp ? -1 : 1;
